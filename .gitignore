@@ -1,1 +1,5 @@
-/.idea/
+
+/infrastructure/database/files/
+.DS_Store
+.idea
+.env

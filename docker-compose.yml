@@ -1,0 +1,16 @@
+version: '3'
+
+services:
+  database:
+    image: mysql:5.7
+    volumes:
+      - ./infrastructure/database:/docker-entrypoint-initdb.d
+      - ./infrastructure/database/files:/var/lib/mysql
+    ports:
+      - 3306:3306
+    environment:
+      MYSQL_USER: example
+      MYSQL_PASSWORD: example
+      MYSQL_ROOT_PASSWORD: example
+      MYSQL_DATABASE: example
+    restart: on-failure
